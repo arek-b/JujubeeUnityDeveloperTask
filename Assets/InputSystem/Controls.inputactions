@@ -1,0 +1,54 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "WeaponControls",
+            "id": "4f698e54-106c-448b-aa68-777adbe80aa8",
+            "actions": [
+                {
+                    "name": "UseWeapon",
+                    "type": "Button",
+                    "id": "cd9aeea0-c12f-4c75-80a8-37cd8d451a11",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "NextWeapon",
+                    "type": "Button",
+                    "id": "d46daafe-174a-4e1a-9386-3326fc741162",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5f10d999-d61e-4730-9f3a-95abb80592ff",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ac7a8c77-3077-43cf-a4ce-97de727f5e89",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
