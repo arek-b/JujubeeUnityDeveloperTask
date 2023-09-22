@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84d7f6f456dd8c4da540f34da153534, type: 3}
-  m_Name: BaseballBat
+  m_Name: Knife
   m_EditorClassIdentifier: 
-  weaponName: Baseball Bat
-  damage: 7
-  twoHanded: 1
+  model: {fileID: 6440599648175510709, guid: c1ab9abedc9d80f4a9109fe99b4ea8d4, type: 3}
+  weaponName: Combat knife
+  damage: 9
+  twoHanded: 0
