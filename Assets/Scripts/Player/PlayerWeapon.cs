@@ -1,18 +1,18 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using Weapons;
 
 namespace Player
 {
     public class PlayerWeapon : MonoBehaviour
     {
-        [SerializeField] private WeaponType defaultWeapon;
+        [SerializeField] private Weapon defaultWeapon;
+        [SerializeField] private Transform weaponRoot;
 
-        private WeaponSwitching weaponSwitching = new WeaponSwitching();
+        private WeaponSwitching weaponSwitching;
 
         private void Start()
         {
-            
+            weaponSwitching ??= new WeaponSwitching(weaponRoot);
         }
 
         private void OnEnable()

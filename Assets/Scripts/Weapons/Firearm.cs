@@ -3,7 +3,7 @@
 namespace Weapons
 {
     [CreateAssetMenu(fileName = "Firearm", menuName = "ScriptableObjects/Weapons/Firearm")]
-    public class Firearm : WeaponType
+    public class Firearm : Weapon
     {
         [SerializeField] private int ammoPerMagazine;
         [SerializeField] private int maxTotalAmmo;

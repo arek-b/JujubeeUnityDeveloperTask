@@ -3,7 +3,7 @@
 namespace Weapons
 {
     [CreateAssetMenu(fileName = "MeleeWeapon", menuName = "ScriptableObjects/Weapons/MeleeWeapon")]
-    public class Melee : WeaponType
+    public class Melee : Weapon
     {
         [SerializeField] private bool twoHanded;
 
