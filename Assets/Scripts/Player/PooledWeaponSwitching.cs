@@ -47,7 +47,7 @@ namespace Player
                 return;
             }
 
-            pool[currentWeapon] = Object.Instantiate(currentWeapon.Model, modelRoot);
+            pool[currentWeapon] = currentWeapon.Instantiate(modelRoot);
         }
     }
 }

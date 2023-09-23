@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Knife
   m_EditorClassIdentifier: 
   model: {fileID: 6440599648175510709, guid: c1ab9abedc9d80f4a9109fe99b4ea8d4, type: 3}
+  modelScaleMultiplier: 1.5
   weaponName: Combat knife
   damage: 9
   twoHanded: 0
