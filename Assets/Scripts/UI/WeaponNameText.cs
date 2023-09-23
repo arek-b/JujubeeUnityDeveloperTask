@@ -8,14 +8,12 @@ namespace UI
     public class WeaponNameText : MonoBehaviour
     {
         [SerializeField] private TMP_Text textMesh;
-        private string currentWeaponName;
+        private Weapon currentWeapon;
 
         private void Awake()
         {
             PooledWeaponSwitching.OnEquippedWeaponChanged += PooledWeaponSwitching_OnEquippedWeaponChanged;
         }
-
-        private void Start() => UpdateText();
 
         private void OnEnable() => UpdateText();
 
@@ -23,18 +21,16 @@ namespace UI
 
         private void PooledWeaponSwitching_OnEquippedWeaponChanged(Weapon weapon)
         {
-            currentWeaponName = weapon == null ? string.Empty : weapon.Name;
-            UpdateText();
+            currentWeapon = weapon;
+            if (enabled)
+            {
+                UpdateText();
+            }
         }
 
         private void UpdateText()
         {
-            if (enabled == false)
-            {
-                return;
-            }
-
-            textMesh.text = currentWeaponName;
+            textMesh.text = currentWeapon == null ? string.Empty : currentWeapon.Name;
         }
     }
 }
