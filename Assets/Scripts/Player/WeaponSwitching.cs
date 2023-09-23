@@ -11,6 +11,8 @@ namespace Player
         private readonly Transform weaponModelRoot;
         private readonly Dictionary<Weapon, GameObject> weaponModelPool = new();
 
+        public Weapon CurrentWeapon => currentWeaponData;
+
         public WeaponSwitching(Transform weaponModelRoot)
         {
             this.weaponModelRoot = weaponModelRoot;
