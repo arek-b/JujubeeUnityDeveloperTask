@@ -10,13 +10,13 @@ namespace Player
         [SerializeField] private Transform weaponRoot;
         [SerializeField] private Weapon[] availableWeapons;
         private int currentWeaponIndex = 0;
-        private WeaponSwitching weaponSwitching;
+        private PooledWeaponSwitching weaponSwitching;
         private Controls controls;
 
         private void Awake()
         {
             controls = new Controls();
-            weaponSwitching = new WeaponSwitching(weaponRoot);
+            weaponSwitching = new PooledWeaponSwitching(weaponRoot);
             if (availableWeapons.Length > 0)
             {
                 weaponSwitching.SwitchToWeapon(availableWeapons[0]);
