@@ -10,6 +10,9 @@ namespace Player
         private readonly Transform modelRoot;
         private readonly Dictionary<Weapon, GameObject> pool = new();
 
+        public delegate void EquippedWeaponChanged(Weapon weapon);
+        public static event EquippedWeaponChanged OnEquippedWeaponChanged;
+
         public Weapon CurrentWeapon => currentWeapon;
 
         public PooledWeaponSwitching(Transform weaponModelRoot)
@@ -21,6 +24,7 @@ namespace Player
         {
             UnequipCurrentWeapon();
             EquipWeapon(weaponData);
+            OnEquippedWeaponChanged?.Invoke(weaponData);
         }
 
         private void UnequipCurrentWeapon()

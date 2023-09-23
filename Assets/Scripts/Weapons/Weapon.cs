@@ -9,6 +9,8 @@ namespace Weapons
         [SerializeField] protected string weaponName;
         [SerializeField] protected float damage;
 
+        public string Name => weaponName;
+
         public GameObject Instantiate(Transform parent)
         {
             GameObject instance = Instantiate(model, parent);

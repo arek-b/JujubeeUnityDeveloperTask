@@ -17,6 +17,10 @@ namespace Player
         {
             controls = new Controls();
             weaponSwitching = new PooledWeaponSwitching(weaponRoot);
+        }
+
+        private void Start()
+        {
             if (availableWeapons.Length > 0)
             {
                 weaponSwitching.SwitchToWeapon(availableWeapons[0]);
