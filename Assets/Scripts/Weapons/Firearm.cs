@@ -10,7 +10,8 @@ namespace Weapons
 
         public override void Use()
         {
-            Debug.Log("Using a firearm");
+            Debug.Log($"Using a firearm: {weaponName} ({damage} DMG, ammoPerMagazine: {ammoPerMagazine}, "
+                      + $"maxTotalAmmo: {maxTotalAmmo})");
         }
     }
 }

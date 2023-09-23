@@ -5,8 +5,8 @@ namespace Weapons
     public abstract class Weapon : ScriptableObject
     {
         [SerializeField] private GameObject model;
-        [SerializeField] private string weaponName;
-        [SerializeField] private float damage;
+        [SerializeField] protected string weaponName;
+        [SerializeField] protected float damage;
 
         public GameObject Model => model;
 

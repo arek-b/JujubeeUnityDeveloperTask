@@ -9,7 +9,7 @@ namespace Weapons
 
         public override void Use()
         {
-            Debug.Log("Using a melee weapon");
+            Debug.Log($"Using a melee weapon: {weaponName} ({damage} DMG, twoHanded: {twoHanded})");
         }
     }
 }
