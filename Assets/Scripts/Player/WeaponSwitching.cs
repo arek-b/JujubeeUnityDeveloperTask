@@ -36,7 +36,7 @@ namespace Player
                 return;
             }
 
-            weaponModelPool.Add(currentWeaponData, currentWeaponModelInstance);
+            weaponModelPool[currentWeaponData] = currentWeaponModelInstance;
             currentWeaponModelInstance.SetActive(false);
             currentWeaponModelInstance = null;
             currentWeaponData = null;
@@ -44,9 +44,11 @@ namespace Player
 
         private void EquipWeapon(Weapon weaponData)
         {
+            currentWeaponData = weaponData;
             if (weaponModelPool.TryGetValue(weaponData, out GameObject weaponModel))
             {
                 weaponModel.SetActive(true);
+                currentWeaponModelInstance = weaponModel;
                 return;
             }
 
